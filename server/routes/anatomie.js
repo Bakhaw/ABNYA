@@ -5,10 +5,13 @@ const router = express.Router();
 // POST
 router.post('/add', (req, res) => {
   const newAnatomie = new Anatomie(req.body);
-  newAnatomie.save((err, article) => {
+  newAnatomie.save(err => {
     if (err) res.json(err);
-    res.json({ message: "Article d'anatomie sauvegardé" });
   });
+  res.redirect('http://localhost:3000/anatomie/cours');
+
+  // For Postman
+  // res.json({ message: "Article d'anatomie sauvegardé" });
 });
 
 // GET

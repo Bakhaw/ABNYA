@@ -5,10 +5,13 @@ const router = express.Router();
 // POST
 router.post('/add', (req, res) => {
   const newMusique = new Musique(req.body);
-  newMusique.save((err, article) => {
+  newMusique.save(err => {
     if (err) res.json(err);
-    res.json({ message: 'Article de musique sauvegardé' });
   });
+  res.redirect('http://localhost:3000/musique/cours');
+
+  // For Postman
+  // res.json({ message: 'Article de musique sauvegardé' });
 });
 
 // GET

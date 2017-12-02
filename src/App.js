@@ -50,7 +50,7 @@ class App extends Component {
 
       <Router>
         <div>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
             <Link to ="/" className="navbar-brand">ABNYA</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"

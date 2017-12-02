@@ -1,7 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const config = require('./config/config');
-const routes = require('./routes/routes');
+const anatomie = require('./routes/anatomie');
+const danse = require('./routes/danse');
+const musique = require('./routes/musique');
 
 const app = express();
 
@@ -10,7 +12,9 @@ mongoose.connect(config.mongoUrl, () => {
 });
 
 app.use(express.urlencoded({ extended: true }));
-app.use(routes);
+app.use('/anatomie', anatomie);
+app.use('/danse', danse);
+app.use('/musique', musique);
 
 app.listen(config.port, () => {
   console.log(`Connecté au port ${config.port}`);

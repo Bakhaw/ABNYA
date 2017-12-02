@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import DeleteButton from './DeleteButton';
+import EditForm from './EditForm';
 
 class Accueil extends Component {
 
@@ -18,13 +20,20 @@ class Accueil extends Component {
   render() {
     return (
         <div>
-          <ul>
+          <ul className="container-fluid">
             {this.state.data.map((anat, index) =>
-              <li key={index}>
-                <p>Date: {anat.date}</p>
-                <p>Titre: {anat.titre}</p>
-                <p>Cours: {anat.article}</p>
-                <p>Liens: {anat.liens}</p>
+              <li key={index} className="d-flex">
+                <div>
+                  <p>Date: {anat.date}</p>
+                  <p>Titre: {anat.titre}</p>
+                  <p>Cours: {anat.article}</p>
+                  <p>Liens: {anat.liens}</p>
+                </div>
+                <div>
+                  <EditForm id={anat._id} date={anat.date} titre={anat.titre} article={anat.article}
+                            liens={anat.liens}/>
+                  <DeleteButton id={anat._id}/>
+                </div>
               </li>
             )}
           </ul>

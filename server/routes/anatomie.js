@@ -24,7 +24,10 @@ router.post('/update/:id', (req, res) => {
   Anatomie.findByIdAndUpdate(req.params.id, req.body, err => {
     if (err) res.send(err);
   });
-  res.json({ message: "Article d'anatomie modifié" });
+  res.redirect('http://localhost:3000/anatomie/cours');
+
+  // For Postman
+  // res.json({ message: "Article d'anatomie modifié" });
 });
 
 // DELETE
@@ -32,7 +35,10 @@ router.get('/delete/:id', (req, res) => {
   Anatomie.findByIdAndRemove(req.params.id, err => {
     if (err) res.send(err);
   });
-  res.json({ message: "Article d'anatomie supprimé" });
+  res.redirect('http://localhost:3000/anatomie/cours');
+
+  // For Postman
+  // res.json({ message: "Article d'anatomie supprimé" });
 });
 
 module.exports = router;

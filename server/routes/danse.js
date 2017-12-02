@@ -24,7 +24,10 @@ router.post('/update/:id', (req, res) => {
   Danse.findByIdAndUpdate(req.params.id, req.body, err => {
     if (err) res.send(err);
   });
-  res.json({ message: 'Article de danse modifié' });
+  res.redirect('http://localhost:3000/danse/cours');
+
+  // For Postman
+  // res.json({ message: 'Article de danse modifié' });
 });
 
 // DELETE
@@ -32,7 +35,10 @@ router.get('/delete/:id', (req, res) => {
   Danse.findByIdAndRemove(req.params.id, err => {
     if (err) res.send(err);
   });
-  res.json({ message: 'Article de danse supprimé' });
+  res.redirect('http://localhost:3000/danse/cours');
+
+  // For Postman
+  // res.json({ message: 'Article de danse supprimé' });
 });
 
 module.exports = router;

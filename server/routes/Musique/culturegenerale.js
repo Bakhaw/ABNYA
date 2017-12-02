@@ -24,7 +24,10 @@ router.post('/update/:id', (req, res) => {
   CultureGenerale.findByIdAndUpdate(req.params.id, req.body, err => {
     if (err) res.send(err);
   });
-  res.json({ message: 'Article de culture générale modifié' });
+  res.redirect('http://localhost:3000/musique/culture-generale/cours');
+
+  // For Postman
+  // res.json({ message: 'Article de culture générale modifié' });
 });
 
 // DELETE
@@ -32,7 +35,10 @@ router.get('/delete/:id', (req, res) => {
   CultureGenerale.findByIdAndRemove(req.params.id, err => {
     if (err) res.send(err);
   });
-  res.json({ message: 'Article de culture générale supprimé' });
+  res.redirect('http://localhost:3000/musique/culture-generale/cours');
+
+  // For Postman
+  // res.json({ message: 'Article de culture générale supprimé' });
 });
 
 module.exports = router;

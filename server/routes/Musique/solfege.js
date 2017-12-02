@@ -24,7 +24,10 @@ router.post('/update/:id', (req, res) => {
   Solfege.findByIdAndUpdate(req.params.id, req.body, err => {
     if (err) res.send(err);
   });
-  res.json({ message: 'Article de solfège modifié' });
+  res.redirect('http://localhost:3000/musique/solfege/cours');
+
+  // For Postman
+  // res.json({ message: 'Article de solfège modifié' });
 });
 
 // DELETE
@@ -32,7 +35,10 @@ router.get('/delete/:id', (req, res) => {
   Solfege.findByIdAndRemove(req.params.id, err => {
     if (err) res.send(err);
   });
-  res.json({ message: 'Article de solfège supprimé' });
+  res.redirect('http://localhost:3000/musique/solfege/cours');
+
+  // For Postman
+  // res.json({ message: 'Article de solfège supprimé' });
 });
 
 module.exports = router;

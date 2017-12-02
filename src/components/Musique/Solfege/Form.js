@@ -5,7 +5,7 @@ class Form extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <form action="http://localhost:3005/musique/add" method="POST">
+        <form action="http://localhost:3005/musique/solfege/add" method="POST">
           <div className="form-group">
             <label for="date">Date</label>
             <input name="date" type="text" className="form-control" id="date"

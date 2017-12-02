@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const MusiqueSchema = mongoose.Schema({
+const SolfegeSchema = mongoose.Schema({
   date: String,
   titre: String,
   article: String,
   liens: String,
 }, { versionKey: false });
 
-module.exports = mongoose.model('Musique', MusiqueSchema, 'musique');
+module.exports = mongoose.model('Solfege', SolfegeSchema, 'solfege');

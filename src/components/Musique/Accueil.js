@@ -23,14 +23,14 @@ class Accueil extends Component {
     return (
       <Router>
         <div>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#e3f2fd' }}>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav2">
-              <ul className="navbar-nav">
+              <ul className="navbar-nav col-md-12 d-flex justify-content-around">
 
                 {/* Analyse Dropdown */}
                 <li className="nav-item dropdown">
@@ -109,22 +109,22 @@ class Accueil extends Component {
           </nav>
 
           {/* Routes musique/analyse */}
-          <Route exact path="/musique/analyse/cours" component={AnalyseAccueil}/>
+          <Route path="/musique/analyse/cours" component={AnalyseAccueil}/>
           <Route path="/musique/analyse/ajouter" component={AnalyseForm}/>
 
           {/* Routes musique/culture-generale */}
-          <Route exact path="/musique/culture-generale/cours" component={CultureGeneraleAccueil}/>
+          <Route path="/musique/culture-generale/cours" component={CultureGeneraleAccueil}/>
           <Route path="/musique/culture-generale/ajouter" component={CultureGeneraleForm}/>
 
           {/* Routes musique/culture-reconnaissance-et-reproduction */}
-          <Route exact path="/musique/culture-reconnaissance-et-reproduction/cours"
+          <Route path="/musique/culture-reconnaissance-et-reproduction/cours"
                  component={CultureRRAccueil}/>
           <Route path="/musique/culture-reconnaissance-et-reproduction/ajouter"
                  component={CultureRRForm}/>
 
           {/* Routes musique/solfege */}
-          <Route exact path="/musique/solfege/cours" component={SolfegeAccueil}/>
-          <Route exact path="/musique/solfege/ajouter" component={SolfegeForm}/>
+          <Route path="/musique/solfege/cours" component={SolfegeAccueil}/>
+          <Route path="/musique/solfege/ajouter" component={SolfegeForm}/>
 
         </div>
       </Router>

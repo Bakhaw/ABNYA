@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+// Accueil
 import Accueil from './components/Accueil/Accueil';
 
 // Anatomie
@@ -29,10 +31,10 @@ class App extends Component {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
+              <ul className="navbar-nav col-md-12 d-flex justify-content-around">
 
                 {/* Anatomie Dropdown */}
-                <li className="nav-item dropdown col-md-6">
+                <li className="nav-item dropdown">
                   <a to="/anatomie" className="nav-link dropdown-toggle" href=""
                         id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -46,7 +48,7 @@ class App extends Component {
                 </li>
 
                 {/* Danse Dropdown */}
-                <li className="nav-item dropdown col-md-6">
+                <li className="nav-item dropdown">
                   <a to="/danse" className="nav-link dropdown-toggle" href=""
                         id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -60,7 +62,7 @@ class App extends Component {
                 </li>
 
                 {/* Musique Dropdown */}
-                <li className="nav-item col-md-6">
+                <li className="nav-item">
                   <Link to="/musique" className="nav-link" href="" role="button">
                         Musique
                   </Link>
@@ -72,19 +74,15 @@ class App extends Component {
           <Route exact path ="/" component={Accueil}/>
 
           {/* Routes Anatomie */}
-          {/* <Route exact path="/anatomie" component={Anatomie} /> */}
-          <Route exact path="/anatomie/cours" component={AnatomieAccueil}/>
-          <Route exact path="/anatomie/ajouter" component={AnatomieForm}/>
+          <Route path="/anatomie/cours" component={AnatomieAccueil}/>
+          <Route path="/anatomie/ajouter" component={AnatomieForm}/>
 
           {/* Routes Danse */}
-          {/* <Route exact path="/danse" component={Danse} /> */}
-          <Route exact path="/danse/cours" component={DanseAccueil}/>
-          <Route exact path="/danse/ajouter" component={DanseForm}/>
+          <Route path="/danse/cours" component={DanseAccueil}/>
+          <Route path="/danse/ajouter" component={DanseForm}/>
 
           {/* Routes Musique */}
-          {/* <Route exact path="/musique" component={Musique} /> */}
           <Route exact path="/musique" component={MusiqueAccueil}/>
-          {/* <Route exact path="/musique/ajouter" component={MusiqueForm}/> */}
 
         </div>
       </Router>

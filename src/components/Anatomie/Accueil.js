@@ -22,17 +22,21 @@ class Accueil extends Component {
         <div>
           <ul className="container-fluid">
             {this.state.data.map((anat, index) =>
-              <li key={index} className="d-flex">
-                <div>
-                  <p>Date: {anat.date}</p>
-                  <p>Titre: {anat.titre}</p>
-                  <p>Cours: {anat.article}</p>
-                  <p>Liens: {anat.liens}</p>
-                </div>
-                <div>
-                  <EditForm id={anat._id} date={anat.date} titre={anat.titre} article={anat.article}
-                            liens={anat.liens}/>
-                  <DeleteButton id={anat._id}/>
+              <li key={index}>
+                <div className="d-flex flex-nowrap flex-row justify-content-start">
+                  <div className="col-md-2">
+                    <p>Date: {anat.date}</p>
+                    <p>Titre: {anat.titre}</p>
+                  </div>
+                  <div className="col-md-8">
+                    <p>Cours: {anat.article}</p>
+                    <p>Liens: {anat.liens}</p>
+                  </div>
+                  <div className="col-md-2">
+                    <EditForm id={anat._id} date={anat.date} titre={anat.titre}
+                              article={anat.article} liens={anat.liens}/>
+                    <DeleteButton id={anat._id}/>
+                  </div>
                 </div>
               </li>
             )}

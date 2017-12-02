@@ -51,7 +51,7 @@ class App extends Component {
       <Router>
         <div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand">ABNYA</a>
+            <Link to ="/" className="navbar-brand">ABNYA</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -59,10 +59,9 @@ class App extends Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
-                <li className="nav-item col-md-4">
-                  <Link to="/" className="nav-link">Accueil</Link>
-                </li>
-                <li className="nav-item dropdown col-md-4">
+
+                {/* Anatomie Dropdown */}
+                <li className="nav-item dropdown col-md-6">
                   <a to="/anatomie" className="nav-link dropdown-toggle" href=""
                         id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -74,7 +73,9 @@ class App extends Component {
                       <Link className="dropdown-item" to="/anatomie/ajouter">Ajouter un cours</Link>
                     </div>
                 </li>
-                <li className="nav-item dropdown col-md-4">
+
+                {/* Danse Dropdown */}
+                <li className="nav-item dropdown col-md-6">
                   <a to="/anatomie" className="nav-link dropdown-toggle" href=""
                         id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -86,7 +87,9 @@ class App extends Component {
                       <Link className="dropdown-item" to="/danse/ajouter">Ajouter un cours</Link>
                     </div>
                 </li>
-                <li className="nav-item dropdown col-md-4">
+
+                {/* Musique Dropdown */}
+                <li className="nav-item dropdown col-md-6">
                   <a to="/anatomie" className="nav-link dropdown-toggle" href=""
                         id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -104,14 +107,17 @@ class App extends Component {
 
           <Route exact path ="/" component={Accueil}/>
 
+          {/* Routes Anatomie */}
           <Route exact path="/anatomie" component={Anatomie} />
           <Route exact path="/anatomie/cours" component={AnatomieAccueil}/>
           <Route exact path="/anatomie/ajouter" component={AnatomieForm}/>
 
+          {/* Routes Danse */}
           <Route exact path="/danse" component={Danse} />
           <Route exact path="/danse/cours" component={DanseAccueil}/>
           <Route exact path="/danse/ajouter" component={DanseForm}/>
 
+          {/* Routes Musique */}
           <Route exact path="/musique" component={Musique} />
           <Route exact path="/musique/cours" component={MusiqueAccueil}/>
           <Route exact path="/musique/ajouter" component={MusiqueForm}/>

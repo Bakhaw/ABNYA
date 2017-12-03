@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DeleteButton from './DeleteButton';
-import EditForm from './EditForm';
+import DeleteButton from '../../DeleteButton';
+import EditForm from '../../EditForm';
 
 class Accueil extends Component {
 
@@ -8,11 +8,12 @@ class Accueil extends Component {
     super(props);
     this.state = {
       data: [],
+      url: 'http://localhost:3005/musique/culture-generale',
     };
   }
 
   componentDidMount() {
-    fetch('http://localhost:3005/musique/culture-generale')
+    fetch(this.state.url)
       .then(data => data.json())
       .then(data => this.setState({ data }));
   }
@@ -22,18 +23,22 @@ class Accueil extends Component {
         <div>
           <ul className="container-fluid">
             {this.state.data.map((cultureGenerale, index) =>
-              <li key={index} className="d-flex">
-                <div>
-                  <p>Date: {cultureGenerale.date}</p>
-                  <p>Titre: {cultureGenerale.titre}</p>
-                  <p>Cours: {cultureGenerale.article}</p>
-                  <p>Liens: {cultureGenerale.liens}</p>
-                </div>
-                <div>
-                  <EditForm id={cultureGenerale._id} date={cultureGenerale.date}
-                            titre={cultureGenerale.titre} article={cultureGenerale.article}
-                            liens={cultureGenerale.liens}/>
-                  <DeleteButton id={cultureGenerale._id}/>
+              <li key={index}>
+                <div className="d-flex">
+                  <div className="col-md-2">
+                    <p>Date: {cultureGenerale.date}</p>
+                    <p>Titre: {cultureGenerale.titre}</p>
+                  </div>
+                  <div className="col-md-8">
+                    <p>Cours: {cultureGenerale.article}</p>
+                    <p>Liens: {cultureGenerale.liens}</p>
+                  </div>
+                  <div className="col-md-2">
+                    <EditForm id={cultureGenerale._id} date={cultureGenerale.date}
+                              titre={cultureGenerale.titre} article={cultureGenerale.article}
+                              liens={cultureGenerale.liens} url={this.state.url}/>
+                    <DeleteButton id={cultureGenerale._id} url={this.state.url}/>
+                  </div>
                 </div>
               </li>
             )}

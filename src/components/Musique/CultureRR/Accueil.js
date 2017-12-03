@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DeleteButton from './DeleteButton';
-import EditForm from './EditForm';
+import DeleteButton from '../../DeleteButton';
+import EditForm from '../../EditForm';
 
 class Accueil extends Component {
 
@@ -8,11 +8,12 @@ class Accueil extends Component {
     super(props);
     this.state = {
       data: [],
+      url: 'http://localhost:3005/musique/culture-rr',
     };
   }
 
   componentDidMount() {
-    fetch('http://localhost:3005/musique/culture-rr')
+    fetch(this.state.url)
       .then(data => data.json())
       .then(data => this.setState({ data }));
   }
@@ -22,18 +23,22 @@ class Accueil extends Component {
         <div>
           <ul className="container-fluid">
             {this.state.data.map((cultureRR, index) =>
-              <li key={index} className="d-flex">
-                <div>
-                  <p>Date: {cultureRR.date}</p>
-                  <p>Titre: {cultureRR.titre}</p>
-                  <p>Cours: {cultureRR.article}</p>
-                  <p>Liens: {cultureRR.liens}</p>
-                </div>
-                <div>
-                  <EditForm id={cultureRR._id} date={cultureRR.date}
-                            titre={cultureRR.titre} article={cultureRR.article}
-                            liens={cultureRR.liens}/>
-                  <DeleteButton id={cultureRR._id}/>
+              <li key={index}>
+                <div className="d-flex">
+                  <div className="col-md-2">
+                    <p>Date: {cultureRR.date}</p>
+                    <p>Titre: {cultureRR.titre}</p>
+                  </div>
+                  <div className="col-md-8">
+                    <p>Cours: {cultureRR.article}</p>
+                    <p>Liens: {cultureRR.liens}</p>
+                  </div>
+                  <div className="col-md-2">
+                    <EditForm id={cultureRR._id} date={cultureRR.date}
+                              titre={cultureRR.titre} article={cultureRR.article}
+                              liens={cultureRR.liens} url={this.state.url}/>
+                    <DeleteButton id={cultureRR._id} url={this.state.url}/>
+                  </div>
                 </div>
               </li>
             )}

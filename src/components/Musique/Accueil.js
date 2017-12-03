@@ -23,7 +23,7 @@ class Accueil extends Component {
     return (
       <Router>
         <div>
-          <nav className="navbar navbar-expand-lg navbar-light"
+          <nav className="navbar navbar-expand-lg navbar-light navbar2"
                style={{ backgroundColor: '#e3f2fd' }}>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false"

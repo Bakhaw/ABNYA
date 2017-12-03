@@ -23,12 +23,12 @@ class Accueil extends Component {
         <div>
           {this.state.data.length === 0 &&
             <h4 className="d-flex justify-content-center align-items-center"
-                style={{ height: '80vh' }}>
+                style={{ minHeight: '65vh' }}>
               Tu n'as toujours pas ajouté de cours ici, c'est pas très sérieux!
             </h4>
           }
           {this.state.data &&
-            <ul className="container-fluid">
+            <ul className="container-fluid cours-container">
               {this.state.data.map((cultureGenerale, index) =>
                 <li key={index}>
                   <div className="d-flex">

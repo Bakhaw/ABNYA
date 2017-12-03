@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // Accueil
-import Accueil from './components/Accueil/Accueil';
+import Accueil from './components/Accueil';
 
 // Anatomie
 import AnatomieAccueil from './components/Anatomie/Accueil';
@@ -23,7 +23,7 @@ class App extends Component {
 
       <Router>
         <div>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <Link to ="/" className="navbar-brand">ABNYA</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"

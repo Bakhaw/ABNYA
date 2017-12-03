@@ -21,28 +21,36 @@ class Accueil extends Component {
   render() {
     return (
         <div>
-          <ul className="container-fluid">
-            {this.state.data.map((solfege, index) =>
-              <li key={index}>
-                <div className="d-flex">
-                  <div className="col-md-2">
-                    <p>Date: {solfege.date}</p>
-                    <p>Titre: {solfege.titre}</p>
+          {this.state.data.length === 0 &&
+            <h4 className="d-flex justify-content-center align-items-center"
+                style={{ height: '80vh' }}>
+              Tu n'as toujours pas ajouté de cours ici, c'est pas très sérieux!
+            </h4>
+          }
+          {this.state.data &&
+            <ul className="container-fluid">
+              {this.state.data.map((solfege, index) =>
+                <li key={index}>
+                  <div className="d-flex">
+                    <div className="col-md-2">
+                      <p>Date: {solfege.date}</p>
+                      <p>Titre: {solfege.titre}</p>
+                    </div>
+                    <div className="col-md-8">
+                      <p>Cours: {solfege.article}</p>
+                      <p>Liens: {solfege.liens}</p>
+                    </div>
+                    <div className="col-md-2">
+                      <EditForm id={solfege._id} date={solfege.date}
+                                titre={solfege.titre} article={solfege.article}
+                                liens={solfege.liens} url={this.state.url}/>
+                      <DeleteButton id={solfege._id} url={this.state.url}/>
+                    </div>
                   </div>
-                  <div className="col-md-8">
-                    <p>Cours: {solfege.article}</p>
-                    <p>Liens: {solfege.liens}</p>
-                  </div>
-                  <div className="col-md-2">
-                    <EditForm id={solfege._id} date={solfege.date}
-                              titre={solfege.titre} article={solfege.article}
-                              liens={solfege.liens} url={this.state.url}/>
-                    <DeleteButton id={solfege._id} url={this.state.url}/>
-                  </div>
-                </div>
-              </li>
-            )}
-          </ul>
+                </li>
+              )}
+            </ul>
+          }
         </div>
     );
   }

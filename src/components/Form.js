@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Form extends Component {
 
   state = {
-    url: 'http://localhost:3005/musique/culture-rr',
+    url: `http://localhost:3005/${this.props.url}`,
   };
 
   render() {

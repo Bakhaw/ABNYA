@@ -36,16 +36,17 @@ class Accueil extends Component {
                 <li key={index}>
                   <div className="d-flex">
                     <div className="col-md-2">
-                      <p>Date: {infos.date}</p>
-                      <p>Titre: {infos.titre}</p>
+                      <p>{infos.date}</p>
+                      <p>{infos.titre}</p>
+                      <p>{infos.soustitre}</p>
                     </div>
                     <div className="col-md-8">
-                      <p>Cours: {infos.article}</p>
+                      <p>{infos.article}</p>
                       <p>Liens: {infos.liens}</p>
                     </div>
-                    <div className="col-md-2">
-                      <EditButton infos={infos} url={this.state.url}/>
-                      <DeleteButton id={infos._id} url={this.state.url}/>
+                    <div className="col-md-2 d-flex">
+                      <EditButton infos={infos} url={this.state.url} />
+                      <DeleteButton id={infos._id} url={this.state.url} />
                     </div>
                   </div>
                 </li>

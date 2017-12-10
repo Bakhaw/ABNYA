@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // Navbar
-import Navbar from "./components/Navbar";
+import Navbar from './components/Navbars/Navbar';
 
 // Navbar2
-import Navbar2 from "./components/Navbar2";
+import Navbar2 from './components/Navbars/Navbar2';
 
 // Landing Page
-import LandingPage from "./components/LandingPage";
+import LandingPage from './components/LandingPage';
 
 // Components in the same Location
 import { Anatomie, AnatomieForm,
@@ -18,9 +18,9 @@ import { Anatomie, AnatomieForm,
          Analyse, AnalyseForm,
          CultureG, CultureGForm,
          CultureRR, CultureRRForm,
-         Solfege, SolfegeForm} from "./components/Imports";
+         Solfege, SolfegeForm } from './components/Imports';
 
-import "./App.css";
+import './App.css';
 
 class App extends Component {
   render() {
@@ -73,7 +73,7 @@ class App extends Component {
             </Switch>
           </div>
         </Router>
-      </MuiThemeProvider>    
+      </MuiThemeProvider>
     </div>
     );
   }

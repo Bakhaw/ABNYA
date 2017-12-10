@@ -1,6 +1,6 @@
 import React from 'react';
 import Accueil from "./Accueil";
-import Form from "./Form";
+import Form from "./Forms/Form";
 
 export const Anatomie = props => {
   return <Accueil url="anatomie" {...props} />;

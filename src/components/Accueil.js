@@ -42,16 +42,43 @@ class Accueil extends Component {
                   <div className="col-md-8">
                     <h2>{infos.titre_lecon}</h2>
 
-                    {infos.chapitres.chapitre && (
+                    {infos.chapitres.chapitre.soustitre && (
                       // Chapitre 1
                       <div>
                         <h3>{infos.chapitres.chapitre.nom}</h3>
 
                         <h3>{infos.chapitres.chapitre.soustitre.nom}</h3>
-
                         <h3>{infos.chapitres.chapitre.soustitre.cours}</h3>
                       </div>
-                    )}
+                      )}
+
+                      {infos.chapitres.chapitre.soustitre_2 && (
+                        <div>
+                          <h3>{infos.chapitres.chapitre.soustitre_2.nom}</h3>
+                          <h3>{infos.chapitres.chapitre.soustitre_2.cours}</h3>
+                        </div>
+                      )}
+
+                      {infos.chapitres.chapitre.soustitre_3 && (
+                        <div>
+                          <h3>{infos.chapitres.chapitre.soustitre_3.nom}</h3>
+                          <h3>{infos.chapitres.chapitre.soustitre_3.cours}</h3>
+                        </div>
+                      )}
+
+                      {infos.chapitres.chapitre.soustitre_4 && (
+                        <div>
+                          <h3>{infos.chapitres.chapitre.soustitre_4.nom}</h3>
+                          <h3>{infos.chapitres.chapitre.soustitre_4.cours}</h3>
+                        </div>
+                      )}
+
+                      {infos.chapitres.chapitre.soustitre_5 && (
+                        <div>
+                          <h3>{infos.chapitres.chapitre.soustitre_5.nom}</h3>
+                          <h3>{infos.chapitres.chapitre.soustitre_5.cours}</h3>
+                        </div>
+                      )}
                     <hr />
 
                     {infos.chapitres.chapitre_2 && (

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DeleteButton from './DeleteButton';
 import EditButton from './EditButton';
-import Navbar2 from "./Navbar2";
+import Navbar2 from './Navbar2';
 
 class Accueil extends Component {
 
@@ -17,9 +17,9 @@ class Accueil extends Component {
     fetch(this.state.url)
       .then(data => data.json())
       .then(data => this.setState({ data }));
-      console.log(this.state.url);
+    console.log(this.state.url);
   }
-  
+
   render() {
     return (
         <div>

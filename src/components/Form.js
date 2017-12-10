@@ -21,6 +21,11 @@ class Form extends Component {
                    aria-describedby="titre" placeholder="Là un titre"/>
           </div>
           <div className="form-group">
+            <label htmlFor="titre">Sous-Titre</label>
+            <input name="soustitre" type="text" className="form-control" id="titre"
+                   aria-describedby="soustitre" placeholder="Là le fameux sous-titre"/>
+          </div>
+          <div className="form-group">
             <label htmlFor="cours">Cours</label>
             <textarea name="article" type="text" className="form-control" id="cours"
                       aria-describedby="cours" placeholder="Ici t'écris ton bail"/>

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class EditForm extends Component {
 
   render() {
-    return (      
+    return (
       <div className="containter-fluid">
         <form action={`${this.props.url}update/${this.props.id}`} method="POST">
           <div className="form-group">
@@ -13,6 +13,10 @@ class EditForm extends Component {
           <div className="form-group">
             <label>Titre</label>
             <input name="titre" type="text" className="form-control" defaultValue={this.props.titre} placeholder="Là un titre" />
+          </div>
+          <div className="form-group">
+            <label>Sous-Titre</label>
+            <input name="soustitre" type="text" className="form-control" defaultValue={this.props.soustitre} placeholder="Là le fameux sous-titre" />
           </div>
           <div className="form-group">
             <label>Cours</label>
@@ -25,7 +29,7 @@ class EditForm extends Component {
           <button type="submit" className="btn btn-light">
             Sauvegarder
           </button>
-          
+
         </form>
       </div>
     )

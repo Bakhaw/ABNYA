@@ -22,11 +22,11 @@ class Accueil extends Component {
 
   render() {
     return (
-        <div>
+        <div className="cours">
           <Navbar2 />
           {this.state.data.length === 0 &&
             <h4 className="d-flex justify-content-center align-items-center"
-                style={{ minHeight: '80vh' }}>
+                style={{ height: '80vh' }}>
               Tu n'as toujours pas ajouté de cours ici, c'est pas très sérieux!
             </h4>
           }

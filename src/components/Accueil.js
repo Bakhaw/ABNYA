@@ -1,22 +1,30 @@
-import React, { Component } from "react";
-import DeleteButton from "./Buttons/DeleteButton";
-import EditButton from "./Buttons/EditButton";
-import Navbar2 from "./Navbars/Navbar2";
+import React, { Component } from 'react';
+import DeleteButton from './Buttons/DeleteButton';
+import EditButton from './Buttons/EditButton';
+import Navbar2 from './Navbars/Navbar2';
+
+import Chapitre1 from './Chapitres/Chapitre1';
+import Chapitre2 from './Chapitres/Chapitre2';
+import Chapitre3 from './Chapitres/Chapitre3';
+import Chapitre4 from './Chapitres/Chapitre4';
+import Chapitre5 from './Chapitres/Chapitre5';
+import Chapitre6 from './Chapitres/Chapitre6';
+import Chapitre7 from './Chapitres/Chapitre7';
 
 class Accueil extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
-      url: `http://localhost:3005/${this.props.url}/`
+      url: `http://localhost:3005/${this.props.url}/`,
     };
+    console.log(this.state.url);
   }
 
   componentDidMount() {
     fetch(this.state.url)
       .then(data => data.json())
       .then(data => this.setState({ data }));
-    console.log(this.state.url);
   }
 
   render() {
@@ -26,7 +34,7 @@ class Accueil extends Component {
         {this.state.data.length === 0 && (
           <h4
             className="d-flex justify-content-center align-items-center"
-            style={{ height: "80vh" }}
+            style={{ height: '80vh' }}
           >
             Tu n'as toujours pas ajouté de cours ici, c'est pas très sérieux!
           </h4>
@@ -40,119 +48,13 @@ class Accueil extends Component {
                     <h1>{infos.date_lecon}</h1>
                   </div>
                   <div className="col-md-8">
-                    <h2>{infos.titre_lecon}</h2>
-
-                    {infos.chapitres.chapitre.soustitre && (
-                      // Chapitre 1
-                      <div>
-                        <h3>{infos.chapitres.chapitre.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre.soustitre.nom}</h3>
-                        <h3>{infos.chapitres.chapitre.soustitre.cours}</h3>
-                      </div>
-                      )}
-
-                      {infos.chapitres.chapitre.soustitre_2 && (
-                        <div>
-                          <h3>{infos.chapitres.chapitre.soustitre_2.nom}</h3>
-                          <h3>{infos.chapitres.chapitre.soustitre_2.cours}</h3>
-                        </div>
-                      )}
-
-                      {infos.chapitres.chapitre.soustitre_3 && (
-                        <div>
-                          <h3>{infos.chapitres.chapitre.soustitre_3.nom}</h3>
-                          <h3>{infos.chapitres.chapitre.soustitre_3.cours}</h3>
-                        </div>
-                      )}
-
-                      {infos.chapitres.chapitre.soustitre_4 && (
-                        <div>
-                          <h3>{infos.chapitres.chapitre.soustitre_4.nom}</h3>
-                          <h3>{infos.chapitres.chapitre.soustitre_4.cours}</h3>
-                        </div>
-                      )}
-
-                      {infos.chapitres.chapitre.soustitre_5 && (
-                        <div>
-                          <h3>{infos.chapitres.chapitre.soustitre_5.nom}</h3>
-                          <h3>{infos.chapitres.chapitre.soustitre_5.cours}</h3>
-                        </div>
-                      )}
-                    <hr />
-
-                    {infos.chapitres.chapitre_2 && (
-                      // Chapitre 2
-                      <div>
-                        <h3>{infos.chapitres.chapitre_2.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_2.soustitre.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_2.soustitre.cours}</h3>
-                      </div>
-                    )}
-                    <hr />
-
-                    {infos.chapitres.chapitre_3 && (
-                      // Chapitre 3
-                      <div>
-                        <h3>{infos.chapitres.chapitre_3.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_3.soustitre.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_3.soustitre.cours}</h3>
-                      </div>
-                    )}
-                    <hr />
-
-                    {infos.chapitres.chapitre_4 && (
-                      // Chapitre 4
-                      <div>
-                        <h3>{infos.chapitres.chapitre_4.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_4.soustitre.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_4.soustitre.cours}</h3>
-                      </div>
-                    )}
-                    <hr />
-
-                    {infos.chapitres.chapitre_5 && (
-                      // Chapitre 5
-                      <div>
-                        <h3>{infos.chapitres.chapitre_5.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_5.soustitre.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_5.soustitre.cours}</h3>
-                      </div>
-                    )}
-                    <hr />
-
-                    {infos.chapitres.chapitre_6 && (
-                      // Chapitre 6
-                      <div>
-                        <h3>{infos.chapitres.chapitre_6.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_6.soustitre.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_6.soustitre.cours}</h3>
-                      </div>
-                    )}
-                    <hr />
-
-                    {infos.chapitres.chapitre_7 && (
-                      // Chapitre 7
-                      <div>
-                        <h3>{infos.chapitres.chapitre_7.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_7.soustitre.nom}</h3>
-
-                        <h3>{infos.chapitres.chapitre_7.soustitre.cours}</h3>
-                      </div>
-                    )}
-                    <hr />
-
+                    <Chapitre1 infos={infos} />
+                    <Chapitre2 infos={infos} />
+                    <Chapitre3 infos={infos} />
+                    <Chapitre4 infos={infos} />
+                    <Chapitre5 infos={infos} />
+                    <Chapitre6 infos={infos} />
+                    <Chapitre7 infos={infos} />
                   </div>
                   <div className="col-md-2 d-flex">
                     <EditButton infos={infos} url={this.state.url} />

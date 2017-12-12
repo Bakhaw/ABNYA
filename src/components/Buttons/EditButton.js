@@ -4,12 +4,12 @@ import Modal from '../Forms/Modal';
 class EditButton extends Component {
 
   state = {
-    formToggle: false
+    formToggle: false,
   };
 
   handleDisplay = () => {
     this.setState({
-      formToggle: this.state.formToggle ? false : true
+      formToggle: this.state.formToggle ? false : true,
     });
   };
 

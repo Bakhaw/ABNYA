@@ -16,25 +16,25 @@ class ChapitreForm extends Component {
     this.setState({
       soustitre2: !this.state.soustitre2,
     });
-  }
+  };
 
   displaySousTitre3 = () => {
     this.setState({
       soustitre3: !this.state.soustitre3,
     });
-  }
+  };
 
   displaySousTitre4 = () => {
     this.setState({
       soustitre4: !this.state.soustitre4,
     });
-  }
+  };
 
   displaySousTitre5 = () => {
     this.setState({
       soustitre5: !this.state.soustitre5,
     });
-  }
+  };
 
   render() {
     return (

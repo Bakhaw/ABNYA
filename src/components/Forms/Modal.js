@@ -2,13 +2,12 @@ import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import EditForm from "./EditForm";
+import EditForm from './EditForm';
 
 const customContentStyle = {
-  width: "90%",
-  maxWidth: "none"
+  width: '90%',
+  maxWidth: 'none',
 };
-
 
 export default class Modal extends React.Component {
   state = {
@@ -33,7 +32,9 @@ export default class Modal extends React.Component {
           <Dialog title="Modifier" modal={false} contentStyle={customContentStyle}
                   open={this.state.open} autoScrollBodyContent={true}
                   onRequestClose={this.handleClose}>
-            <EditForm url={this.props.url} id={this.props.infos._id} date={this.props.infos.date_lecon}
+            <EditForm url={this.props.url}
+                      id={this.props.infos._id}
+                      date={this.props.infos.date_lecon}
                       titre={this.props.infos.titre_lecon}
                       chapitre={this.props.infos.chapitres.chapitre.nom}
                       soustitre={this.props.infos.chapitres.chapitre.soustitre.nom}

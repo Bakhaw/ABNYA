@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const AnatomieSchema = mongoose.Schema(
   {
@@ -20,31 +20,31 @@ const AnatomieSchema = mongoose.Schema(
         // SOUS-TITRE 1
         soustitre: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 2
         soustitre_2: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 3
         soustitre_3: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 4
         soustitre_4: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 5
         soustitre_5: {
           nom: String,
-          cours: String
+          cours: String,
         },
       },
 
@@ -55,31 +55,31 @@ const AnatomieSchema = mongoose.Schema(
         // SOUS-TITRE 1
         soustitre: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 2
         soustitre_2: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 3
         soustitre_3: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 4
         soustitre_4: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 5
         soustitre_5: {
           nom: String,
-          cours: String
+          cours: String,
         },
       },
 
@@ -90,31 +90,31 @@ const AnatomieSchema = mongoose.Schema(
         // SOUS-TITRE 1
         soustitre: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 2
         soustitre_2: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 3
         soustitre_3: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 4
         soustitre_4: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 5
         soustitre_5: {
           nom: String,
-          cours: String
+          cours: String,
         },
       },
 
@@ -125,31 +125,31 @@ const AnatomieSchema = mongoose.Schema(
         // SOUS-TITRE 1
         soustitre: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 2
         soustitre_2: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 3
         soustitre_3: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 4
         soustitre_4: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 5
         soustitre_5: {
           nom: String,
-          cours: String
+          cours: String,
         },
       },
 
@@ -160,31 +160,31 @@ const AnatomieSchema = mongoose.Schema(
         // SOUS-TITRE 1
         soustitre: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 2
         soustitre_2: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 3
         soustitre_3: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 4
         soustitre_4: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 5
         soustitre_5: {
           nom: String,
-          cours: String
+          cours: String,
         },
       },
 
@@ -195,31 +195,31 @@ const AnatomieSchema = mongoose.Schema(
         // SOUS-TITRE 1
         soustitre: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 2
         soustitre_2: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 3
         soustitre_3: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 4
         soustitre_4: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 5
         soustitre_5: {
           nom: String,
-          cours: String
+          cours: String,
         },
       },
 
@@ -230,36 +230,36 @@ const AnatomieSchema = mongoose.Schema(
         // SOUS-TITRE 1
         soustitre: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 2
         soustitre_2: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 3
         soustitre_3: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 4
         soustitre_4: {
           nom: String,
-          cours: String
+          cours: String,
         },
 
         // SOUS-TITRE 5
         soustitre_5: {
           nom: String,
-          cours: String
+          cours: String,
         },
       },
-    }
+    },
   },
   { versionKey: false }
 );
 
-module.exports = mongoose.model("Anatomie", AnatomieSchema, "anatomie");
+module.exports = mongoose.model('Anatomie', AnatomieSchema, 'anatomie');

@@ -37,10 +37,14 @@ p {
 }
 
 .nav-link {
-    color: rgb(92, 195, 99) !important;
+  color: rgb(92, 195, 99) !important;
   font-size: 1.8em;
   animation-name: navlink;
   animation-duration: 2s;
+}
+
+.navbar-brand {
+  color: rgb(196, 110, 110) !important;
 }
 
 /*Navbar 2*/

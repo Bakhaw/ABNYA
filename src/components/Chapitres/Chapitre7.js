@@ -5,6 +5,9 @@ class Chapitre7 extends Component {
   render() {
     return (
       <div>
+
+        <h3>CHAPITRE 7</h3>
+
         <p>{this.props.infos.chapitres.chapitre_7.nom}</p>
         <p>{this.props.infos.chapitres.chapitre_7.soustitre.nom}</p>
         <p>{this.props.infos.chapitres.chapitre_7.soustitre.cours}</p>

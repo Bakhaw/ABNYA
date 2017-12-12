@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
+import Navbar2 from './Navbars/Navbar2';
+
 import DeleteButton from './Buttons/DeleteButton';
 import EditButton from './Buttons/EditButton';
-import Navbar2 from './Navbars/Navbar2';
 
 import Chapitre1 from './Chapitres/Chapitre1';
 import Chapitre2 from './Chapitres/Chapitre2';
@@ -32,6 +34,8 @@ class Accueil extends Component {
       <div className="cours">
         <Navbar2 />
         {this.state.data.length === 0 && (
+
+          // Si le tableau de data est vide
           <h4
             className="d-flex justify-content-center align-items-center"
             style={{ height: '80vh' }}
@@ -48,7 +52,8 @@ class Accueil extends Component {
                     <h1>{infos.date_lecon}</h1>
                   </div>
                   <div className="col-md-8">
-                    <Chapitre1 infos={infos} />
+                    {/* Contenu des chapitres */}
+                    <Chapitre1 infos={infos} url={this.state.url}/>
                     <Chapitre2 infos={infos} />
                     <Chapitre3 infos={infos} />
                     <Chapitre4 infos={infos} />
@@ -57,7 +62,7 @@ class Accueil extends Component {
                     <Chapitre7 infos={infos} />
                   </div>
                   <div className="col-md-2 d-flex">
-                    <EditButton infos={infos} url={this.state.url} />
+                    {/* <EditButton infos={infos} url={this.state.url} /> */}
                     <DeleteButton id={infos._id} url={this.state.url} />
                   </div>
                 </div>

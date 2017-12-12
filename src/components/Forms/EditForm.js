@@ -6,7 +6,14 @@ class EditForm extends Component {
   render() {
     return (
       <div>
-        <ChapitreForm/>
+        <form action={`${this.props.url}update/${this.props.id}`} method="POST">
+          <ChapitreForm chapitre={this.props.chapitre}
+                      soustitre={this.props.soustitre}
+                      cours={this.props.cours}/>
+          <button type="submit" className="btn btn-light">
+              Sauvegarder
+          </button>
+        </form>
       </div>
     );
   }

@@ -116,3 +116,9 @@ li {
   color: #001A66;
   height: 93vh;
 }
+
+/*Form*/
+
+.displayFormButton:hover {
+  cursor: pointer;
+}

@@ -16,7 +16,7 @@ router.post('/add', (req, res) => {
 
 // GET
 router.get('/', (req, res) => {
-  Analyse.find((err, articles) => err ? res.send(err) : res.json(articles));
+  Analyse.find((err, cours) => err ? res.send(err) : res.json(cours));
 });
 
 // PUT

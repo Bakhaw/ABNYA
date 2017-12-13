@@ -41,25 +41,25 @@ class ChapitreForm extends Component {
       <div>
         <div className="form-group">
           <label htmlFor={this.props.chapitre}>Nom du Chapitre</label>
-          <input name={this.props.chapitre} type="text" className="form-control"
+          <input name="chapitres.chapitre.nom" type="text" className="form-control"
                  id={this.props.chapitre} aria-describedby={this.props.chapitre}
-                 defaultValue={this.props.chapitre} placeholder="Nom du chapitre" />
+                 defaultValue={this.props.chapitreValue} placeholder="Nom du chapitre" />
         </div>
 
         {/* Sous Titre 1 */}
         <div className="form-group">
           <label htmlFor={this.props.soustitre}>Soustitre 1</label>
-          <input name={this.props.soustitre} type="text" className="form-control"
+          <input name="chapitres.chapitre.soustitre.nom" type="text" className="form-control"
                  id={this.props.soustitre}
                  aria-describedby={this.props.soustitre}
-                 defaultValue={this.props.soustitre} placeholder="Nom du sous-titre" />
+                 defaultValue={this.props.soustitreValue} placeholder="Nom du sous-titre" />
         </div>
         <div className="form-group">
           <label htmlFor={this.props.cours}>Cours</label>
-          <textarea name={this.props.cours} type="text" className="form-control"
+          <textarea name="chapitres.chapitre.soustitre.cours" type="text" className="form-control"
                  id={this.props.cours}
                  aria-describedby={this.props.cours}
-                 defaultValue={this.props.cours} placeholder="Cours ..." />
+                 defaultValue={this.props.coursValue} placeholder="Cours ..." />
         </div>
 
         <p onClick={this.displaySousTitre2} className="text-primary displayFormButton">
@@ -71,10 +71,10 @@ class ChapitreForm extends Component {
             {/* Sous Titre 2 */}
             <div className="form-group">
               <label htmlFor={this.props.soustitre2}>Soustitre 2</label>
-              <input name={this.props.soustitre2} type="text" className="form-control"
+              <input name="chapitres.chapitre.soustitre_2.nom" type="text" className="form-control"
                      id={this.props.soustitre2}
                      aria-describedby={this.props.soustitre2}
-                     placeholder="Nom du sous-titre 2" />
+                     defaultValue={this.props.soustitre2} placeholder="Nom du sous-titre 2" />
             </div>
             <div className="form-group">
               <label htmlFor={this.props.cours2}>Cours 2</label>

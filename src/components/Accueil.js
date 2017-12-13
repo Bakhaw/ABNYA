@@ -54,6 +54,8 @@ class Accueil extends Component {
                   <div className="col-md-8">
                     {/* Contenu des chapitres */}
                     <Chapitre1 infos={infos} url={this.state.url}/>
+                    {console.log(infos)}
+
                     <Chapitre2 infos={infos} />
                     <Chapitre3 infos={infos} />
                     <Chapitre4 infos={infos} />

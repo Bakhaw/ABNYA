@@ -3,16 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-// Navbar
 import Navbar from './components/Navbars/Navbar';
 
-// Navbar2
 import Navbar2 from './components/Navbars/Navbar2';
 
-// Landing Page
 import LandingPage from './components/LandingPage';
 
-// Components in the same Location
+// Components exported from the same Location
 import { Anatomie, AnatomieForm,
          Danse, DanseForm,
          Analyse, AnalyseForm,

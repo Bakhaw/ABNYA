@@ -16,7 +16,7 @@ router.post('/add', (req, res) => {
 
 // GET
 router.get('/', (req, res) => {
-  CultureRR.find((err, articles) => err ? res.send(err) : res.json(articles));
+  CultureRR.find((err, cours) => err ? res.send(err) : res.json(cours));
 });
 
 // PUT

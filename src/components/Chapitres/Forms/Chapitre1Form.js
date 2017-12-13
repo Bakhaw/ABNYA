@@ -7,8 +7,11 @@ class Chapitre1Form extends Component {
     return (
       <div>
         <ChapitreForm chapitre="chapitres.chapitre.nom"
+                      chapitreValue={this.props.chapitre}
                       soustitre="chapitres.chapitre.soustitre.nom"
+                      soustitreValue={this.props.soustitre}
                       cours="chapitres.chapitre.soustitre.cours"
+                      coursValue={this.props.cours}
                       soustitre2="chapitres.chapitre.soustitre_2.nom"
                       cours2="chapitres.chapitre.soustitre_2.cours"
                       soustitre3="chapitres.chapitre.soustitre_3.nom"

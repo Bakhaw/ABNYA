@@ -8,6 +8,7 @@ const customContentStyle = {
 };
 
 export default class Modal extends React.Component {
+
   state = {
     open: false,
   };
@@ -31,13 +32,14 @@ export default class Modal extends React.Component {
                   open={this.state.open} autoScrollBodyContent={true}
                   onRequestClose={this.handleClose}>
             <EditForm url={this.props.url}
-                      id={this.props.infos._id}
-                      date={this.props.infos.date_lecon}
-                      titre={this.props.infos.titre_lecon}
-                      chapitre={this.props.infos.chapitres.chapitre.nom}
-                      soustitre={this.props.infos.chapitres.chapitre.soustitre.nom}
-                      cours={this.props.infos.chapitres.chapitre.soustitre.cours}
-                      liens={this.props.infos.liens}/>
+                      id={this.props.id}
+                      date={this.props.date}
+                      titre={this.props.titre}
+                      chapitre={this.props.chapitre}
+                      soustitre={this.props.soustitre}
+                      cours={this.props.cours}
+                      soustitre2={this.props.soustitre2}
+                      liens={this.props.liens}/>
             <button type="submit" className="btn btn-secondary" onClick={this.handleClose}>
               Annuler
             </button>

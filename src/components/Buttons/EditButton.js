@@ -3,23 +3,17 @@ import Modal from '../Forms/Modal';
 
 class EditButton extends Component {
 
-  state = {
-    formToggle: false,
-  };
-
-  handleDisplay = () => {
-    this.setState({
-      formToggle: this.state.formToggle ? false : true,
-    });
-  };
-
   render() {
 
     return (
       <div>
           <Modal
-            infos={this.props.infos} url={this.props.url}
-            onClick={() => this.handleDisplay()}
+            url={this.props.url}
+            id={this.props.infos._id}
+            chapitre={this.props.infos.chapitres.chapitre.nom}
+            soustitre={this.props.infos.chapitres.chapitre.soustitre.nom}
+            cours={this.props.infos.chapitres.chapitre.soustitre.cours}
+            soustitre2={this.props.infos.chapitres.chapitre.soustitre_2.nom}
           />
       </div>
     );

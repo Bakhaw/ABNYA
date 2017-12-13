@@ -16,7 +16,7 @@ router.post('/add', (req, res) => {
 
 // GET
 router.get('/', (req, res) => {
-  CultureGenerale.find((err, articles) => err ? res.send(err) : res.json(articles));
+  CultureGenerale.find((err, cours) => err ? res.send(err) : res.json(cours));
 });
 
 // PUT

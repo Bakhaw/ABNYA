@@ -1,7 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+
+// config
 const config = require('./config/config');
+
+// routes
 const anatomie = require('./routes/anatomie');
 const danse = require('./routes/danse');
 const analyse = require('./routes/Musique/analyse');
@@ -11,6 +15,7 @@ const solfege = require('./routes/Musique/solfege');
 
 const app = express();
 
+// connection to mongodb
 mongoose.connect(config.mongoUrl, () => {
   console.log(`Connecté à la DB => ${config.mongoUrl}`);
 });

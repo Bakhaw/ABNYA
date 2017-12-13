@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ChapitreForm from './ChapitreForm';
+import Chapitre1Form from '../Chapitres/Forms/Chapitre1Form';
 
 class EditForm extends Component {
 
@@ -7,9 +7,7 @@ class EditForm extends Component {
     return (
       <div>
         <form action={`${this.props.url}update/${this.props.id}`} method="POST">
-          <ChapitreForm chapitre={this.props.chapitre}
-                      soustitre={this.props.soustitre}
-                      cours={this.props.cours}/>
+          <Chapitre1Form {...this.props}/>
           <button type="submit" className="btn btn-light">
               Sauvegarder
           </button>

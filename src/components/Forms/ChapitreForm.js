@@ -41,7 +41,7 @@ class ChapitreForm extends Component {
       <div>
         <div className="form-group">
           <label htmlFor={this.props.chapitre}>Nom du Chapitre</label>
-          <input name="chapitres.chapitre.nom" type="text" className="form-control"
+          <input name={this.props.chapitre} type="text" className="form-control"
                  id={this.props.chapitre} aria-describedby={this.props.chapitre}
                  defaultValue={this.props.chapitreValue} placeholder="Nom du chapitre" />
         </div>
@@ -49,14 +49,14 @@ class ChapitreForm extends Component {
         {/* Sous Titre 1 */}
         <div className="form-group">
           <label htmlFor={this.props.soustitre}>Soustitre 1</label>
-          <input name="chapitres.chapitre.soustitre.nom" type="text" className="form-control"
+          <input name={this.props.soustitre} type="text" className="form-control"
                  id={this.props.soustitre}
                  aria-describedby={this.props.soustitre}
                  defaultValue={this.props.soustitreValue} placeholder="Nom du sous-titre" />
         </div>
         <div className="form-group">
           <label htmlFor={this.props.cours}>Cours</label>
-          <textarea name="chapitres.chapitre.soustitre.cours" type="text" className="form-control"
+          <textarea name={this.props.cours} type="text" className="form-control"
                  id={this.props.cours}
                  aria-describedby={this.props.cours}
                  defaultValue={this.props.coursValue} placeholder="Cours ..." />
@@ -71,14 +71,14 @@ class ChapitreForm extends Component {
             {/* Sous Titre 2 */}
             <div className="form-group">
               <label htmlFor={this.props.soustitre2}>Soustitre 2</label>
-              <input name="chapitres.chapitre.soustitre_2.nom" type="text" className="form-control"
+              <input name={this.props.soustitre2} type="text" className="form-control"
                      id={this.props.soustitre2}
                      aria-describedby={this.props.soustitre2}
                      defaultValue={this.props.soustitre2Value} placeholder="Nom du sous-titre 2" />
             </div>
             <div className="form-group">
               <label htmlFor={this.props.cours2}>Cours 2</label>
-              <textarea name="chapitres.chapitre.soustitre_2.cours" type="text" className="form-control"
+              <textarea name={this.props.cours2} type="text" className="form-control"
                      id={this.props.cours2}
                      aria-describedby={this.props.cours2}
                      defaultValue={this.props.cours2Value} placeholder="Cours 2 ..." />
@@ -94,14 +94,14 @@ class ChapitreForm extends Component {
             {/* Sous Titre 3 */}
             <div className="form-group">
               <label htmlFor={this.props.soustitre3}>Soustitre 3</label>
-              <input name="chapitres.chapitre.soustitre_3.nom" type="text" className="form-control"
+              <input name={this.props.soustitre3} type="text" className="form-control"
                      id={this.props.soustitre3}
                      aria-describedby={this.props.soustitre3}
                      defaultValue={this.props.soustitre3Value} placeholder="Nom du sous-titre 3" />
             </div>
             <div className="form-group">
               <label htmlFor={this.props.cours3}>Cours 3</label>
-              <textarea name="chapitres.chapitre.soustitre_3.cours" type="text" className="form-control"
+              <textarea name={this.props.cours3} type="text" className="form-control"
                      id={this.props.cours3}
                      aria-describedby={this.props.cours3}
                      defaultValue={this.props.cours3Value} placeholder="Cours 3 ..." />
@@ -117,14 +117,14 @@ class ChapitreForm extends Component {
             {/* Sous Titre 4 */}
             <div className="form-group">
               <label htmlFor={this.props.soustitre4}>Soustitre 4</label>
-              <input name="chapitres.chapitre.soustitre_4.nom" type="text" className="form-control"
+              <input name={this.props.soustitre4} type="text" className="form-control"
                      id={this.props.soustitre4}
                      aria-describedby={this.props.soustitre4}
                      defaultValue={this.props.soustitre4Value} placeholder="Nom du sous-titre 4" />
             </div>
             <div className="form-group">
               <label htmlFor={this.props.cours4}>Cours 4</label>
-              <textarea name="chapitres.chapitre.soustitre_4.cours" type="text" className="form-control"
+              <textarea name={this.props.cours4} type="text" className="form-control"
                      id={this.props.cours4}
                      aria-describedby={this.props.cours4}
                      defaultValue={this.props.cours4Value} placeholder="Cours 4 ..." />
@@ -140,14 +140,14 @@ class ChapitreForm extends Component {
             {/* Sous Titre 5 */}
             <div className="form-group">
               <label htmlFor={this.props.soustitre5}>Soustitre 5</label>
-              <input name="chapitres.chapitre.soustitre_5.nom" type="text" className="form-control"
+              <input name={this.props.soustitre5} type="text" className="form-control"
                      id={this.props.soustitre5}
                      aria-describedby={this.props.soustitre5}
                      defaultValue={this.props.soustitre5Value} placeholder="Nom du sous-titre 5" />
             </div>
             <div className="form-group">
               <label htmlFor={this.props.cours5}>Cours 5</label>
-              <textarea name="chapitres.chapitre.soustitre_5.cours" type="text" className="form-control"
+              <textarea name={this.props.cours5} type="text" className="form-control"
                      id={this.props.cours5}
                      aria-describedby={this.props.cours5}
                      defaultValue={this.props.cours5Value} placeholder="Cours 5 ..." />

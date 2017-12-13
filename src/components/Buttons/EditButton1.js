@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Modal from '../Forms/Modal';
 
-class EditButton extends Component {
+class EditButton1 extends Component {
 
   render() {
 
@@ -27,4 +27,4 @@ class EditButton extends Component {
   }
 }
 
-export default EditButton;
+export default EditButton1;

@@ -12,7 +12,7 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: `http://localhost:3005/${this.props.url}`
+      url: `http://localhost:3005/${this.props.url}`,
     };
   }
 

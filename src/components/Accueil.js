@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Navbar2 from './Navbars/Navbar2';
 
 import DeleteButton from './Buttons/DeleteButton';
-import EditButton from './Buttons/EditButton';
+import EditButton1 from './Buttons/EditButton1';
 
 import Chapitre1 from './Chapitres/Chapitre1';
 import Chapitre2 from './Chapitres/Chapitre2';
@@ -54,9 +54,7 @@ class Accueil extends Component {
                   <div className="col-md-8">
                     {/* Contenu des chapitres */}
                     <Chapitre1 infos={infos} url={this.state.url}/>
-                    {console.log(infos)}
-
-                    <Chapitre2 infos={infos} />
+                    <Chapitre2 infos={infos} url={this.state.url}/>
                     <Chapitre3 infos={infos} />
                     <Chapitre4 infos={infos} />
                     <Chapitre5 infos={infos} />
@@ -64,7 +62,7 @@ class Accueil extends Component {
                     <Chapitre7 infos={infos} />
                   </div>
                   <div className="col-md-2 d-flex">
-                    {/* <EditButton infos={infos} url={this.state.url} /> */}
+                    {/* <EditButton1 infos={infos} url={this.state.url} /> */}
                     <DeleteButton id={infos._id} url={this.state.url} />
                   </div>
                 </div>

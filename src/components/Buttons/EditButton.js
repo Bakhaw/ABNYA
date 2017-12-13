@@ -14,6 +14,13 @@ class EditButton extends Component {
             soustitre={this.props.infos.chapitres.chapitre.soustitre.nom}
             cours={this.props.infos.chapitres.chapitre.soustitre.cours}
             soustitre2={this.props.infos.chapitres.chapitre.soustitre_2.nom}
+            cours2={this.props.infos.chapitres.chapitre.soustitre_2.cours}
+            soustitre3={this.props.infos.chapitres.chapitre.soustitre_3.nom}
+            cours3={this.props.infos.chapitres.chapitre.soustitre_3.cours}
+            soustitre4={this.props.infos.chapitres.chapitre.soustitre_4.nom}
+            cours4={this.props.infos.chapitres.chapitre.soustitre_4.cours}
+            soustitre5={this.props.infos.chapitres.chapitre.soustitre_5.nom}
+            cours5={this.props.infos.chapitres.chapitre.soustitre_5.cours}
           />
       </div>
     );

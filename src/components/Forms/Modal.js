@@ -39,6 +39,13 @@ export default class Modal extends React.Component {
                       soustitre={this.props.soustitre}
                       cours={this.props.cours}
                       soustitre2={this.props.soustitre2}
+                      cours2={this.props.cours2}
+                      soustitre3={this.props.soustitre3}
+                      cours3={this.props.cours3}
+                      soustitre4={this.props.soustitre4}
+                      cours4={this.props.cours4}
+                      soustitre5={this.props.soustitre5}
+                      cours5={this.props.cours5}
                       liens={this.props.liens}/>
             <button type="submit" className="btn btn-secondary" onClick={this.handleClose}>
               Annuler

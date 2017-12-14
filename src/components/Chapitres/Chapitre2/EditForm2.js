@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import Chapitre1Form from '../Chapitres/Forms/Chapitre1Form';
-import Chapitre2Form from '../Chapitres/Forms/Chapitre2Form';
+import Chapitre2Form from './Chapitre2Form';
 
-class EditForm extends Component {
+class EditForm2 extends Component {
 
   render() {
     return (
       <div>
         <form action={`${this.props.url}update/${this.props.id}`} method="POST">
-          <Chapitre1Form {...this.props}/>
           <Chapitre2Form {...this.props}/>
           <button type="submit" className="btn btn-light">
               Sauvegarder
@@ -20,4 +18,4 @@ class EditForm extends Component {
 
 }
 
-export default EditForm;
+export default EditForm2;

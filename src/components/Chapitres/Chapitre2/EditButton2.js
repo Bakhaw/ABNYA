@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Modal from '../Forms/Modal';
+import Modal2 from './Modal2';
 
 class EditButton2 extends Component {
 
@@ -7,7 +7,7 @@ class EditButton2 extends Component {
 
     return (
       <div>
-          <Modal
+          <Modal2
             url={this.props.url}
             id={this.props.infos._id}
             chapitre={this.props.infos.chapitres.chapitre_2.nom}

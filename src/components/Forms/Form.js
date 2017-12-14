@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Chapitre1Form from '../Chapitres/Forms/Chapitre1Form';
-import Chapitre2Form from '../Chapitres/Forms/Chapitre2Form';
-import Chapitre3Form from '../Chapitres/Forms/Chapitre3Form';
-import Chapitre4Form from '../Chapitres/Forms/Chapitre4Form';
-import Chapitre5Form from '../Chapitres/Forms/Chapitre5Form';
-import Chapitre6Form from '../Chapitres/Forms/Chapitre6Form';
-import Chapitre7Form from '../Chapitres/Forms/Chapitre7Form';
+import Chapitre1Form from '../Chapitres/Chapitre1/Chapitre1Form';
+import Chapitre2Form from '../Chapitres/Chapitre2/Chapitre2Form';
+import Chapitre3Form from '../Chapitres/Chapitre3/Chapitre3Form';
+import Chapitre4Form from '../Chapitres/Chapitre4/Chapitre4Form';
+import Chapitre5Form from '../Chapitres/Chapitre5/Chapitre5Form';
+import Chapitre6Form from '../Chapitres/Chapitre6/Chapitre6Form';
+import Chapitre7Form from '../Chapitres/Chapitre7/Chapitre7Form';
 
 class Form extends Component {
 

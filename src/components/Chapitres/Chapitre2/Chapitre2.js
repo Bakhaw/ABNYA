@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import EditButton2 from '../Buttons/EditButton2';
+import EditButton2 from './EditButton2';
 
 class Chapitre2 extends Component {
 

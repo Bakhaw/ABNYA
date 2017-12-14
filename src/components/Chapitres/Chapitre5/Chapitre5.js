@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EditButton5 from './EditButton5';
 
 class Chapitre5 extends Component {
 
@@ -39,6 +40,7 @@ class Chapitre5 extends Component {
             <p>{this.props.infos.chapitres.chapitre_5.soustitre_5.cours}</p>
           </div>
         }
+        <EditButton5 infos={this.props.infos} url={this.props.url} />
         <hr />
       </div>
     );

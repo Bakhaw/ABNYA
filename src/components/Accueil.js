@@ -3,15 +3,14 @@ import React, { Component } from 'react';
 import Navbar2 from './Navbars/Navbar2';
 
 import DeleteButton from './Buttons/DeleteButton';
-import EditButton1 from './Buttons/EditButton1';
 
-import Chapitre1 from './Chapitres/Chapitre1';
-import Chapitre2 from './Chapitres/Chapitre2';
-import Chapitre3 from './Chapitres/Chapitre3';
-import Chapitre4 from './Chapitres/Chapitre4';
-import Chapitre5 from './Chapitres/Chapitre5';
-import Chapitre6 from './Chapitres/Chapitre6';
-import Chapitre7 from './Chapitres/Chapitre7';
+import Chapitre1 from './Chapitres/Chapitre1/Chapitre1';
+import Chapitre2 from './Chapitres/Chapitre2/Chapitre2';
+import Chapitre3 from './Chapitres/Chapitre3/Chapitre3';
+import Chapitre4 from './Chapitres/Chapitre4/Chapitre4';
+import Chapitre5 from './Chapitres/Chapitre5/Chapitre5';
+import Chapitre6 from './Chapitres/Chapitre6/Chapitre6';
+import Chapitre7 from './Chapitres/Chapitre7/Chapitre7';
 
 class Accueil extends Component {
   constructor(props) {
@@ -55,14 +54,13 @@ class Accueil extends Component {
                     {/* Contenu des chapitres */}
                     <Chapitre1 infos={infos} url={this.state.url}/>
                     <Chapitre2 infos={infos} url={this.state.url}/>
-                    <Chapitre3 infos={infos} />
-                    <Chapitre4 infos={infos} />
-                    <Chapitre5 infos={infos} />
-                    <Chapitre6 infos={infos} />
-                    <Chapitre7 infos={infos} />
+                    <Chapitre3 infos={infos} url={this.state.url}/>
+                    <Chapitre4 infos={infos} url={this.state.url}/>
+                    <Chapitre5 infos={infos} url={this.state.url}/>
+                    <Chapitre6 infos={infos} url={this.state.url}/>
+                    <Chapitre7 infos={infos} url={this.state.url}/>
                   </div>
                   <div className="col-md-2 d-flex">
-                    {/* <EditButton1 infos={infos} url={this.state.url} /> */}
                     <DeleteButton id={infos._id} url={this.state.url} />
                   </div>
                 </div>

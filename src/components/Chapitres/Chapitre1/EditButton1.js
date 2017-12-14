@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Modal from '../Forms/Modal';
+import Modal from './Modal';
 
 class EditButton1 extends Component {
 

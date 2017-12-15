@@ -1,6 +1,6 @@
 import React from 'react';
 import Dialog from 'material-ui/Dialog';
-import EditForm from './EditForm';
+import EditForm1 from './EditForm1';
 
 const customContentStyle = {
   width: '90%',
@@ -31,7 +31,7 @@ export default class Modal extends React.Component {
           <Dialog title="Modifier" modal={false} contentStyle={customContentStyle}
                   open={this.state.open} autoScrollBodyContent={true}
                   onRequestClose={this.handleClose}>
-            <EditForm url={this.props.url}
+            <EditForm1 url={this.props.url}
                       id={this.props.id}
                       date={this.props.date}
                       titre={this.props.titre}

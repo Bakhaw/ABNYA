@@ -13,8 +13,50 @@ class Form extends Component {
     super(props);
     this.state = {
       url: `http://localhost:3005/${this.props.url}`,
+      chapitre2: false,
+      chapitre3: false,
+      chapitre4: false,
+      chapitre5: false,
+      chapitre6: false,
+      chapitre7: false,
     };
   }
+
+  displayChapitre2 = () => {
+    this.setState({
+      chapitre2: !this.state.chapitre2,
+    });
+  };
+
+  displayChapitre3 = () => {
+    this.setState({
+      chapitre3: !this.state.chapitre3,
+    });
+  };
+
+  displayChapitre4 = () => {
+    this.setState({
+      chapitre4: !this.state.chapitre4,
+    });
+  };
+
+  displayChapitre5 = () => {
+    this.setState({
+      chapitre5: !this.state.chapitre5,
+    });
+  };
+
+  displayChapitre6 = () => {
+    this.setState({
+      chapitre6: !this.state.chapitre6,
+    });
+  };
+
+  displayChapitre7 = () => {
+    this.setState({
+      chapitre7: !this.state.chapitre7,
+    });
+  };
 
   render() {
 
@@ -31,13 +73,26 @@ class Form extends Component {
                  id="titre_lecon" aria-describedby="titre_lecon" placeholder="Leçon"/>
         </div>
 
-        <Chapitre1Form />
-        <Chapitre2Form />
-        <Chapitre3Form />
-        <Chapitre4Form />
-        <Chapitre5Form />
-        <Chapitre6Form />
-        <Chapitre7Form />
+        <Chapitre1Form displayChapitre2={this.displayChapitre2}/>
+
+        {this.state.chapitre2 &&
+          <Chapitre2Form displayChapitre3={this.displayChapitre3}/>
+        }
+        {this.state.chapitre3 &&
+          <Chapitre3Form displayChapitre4={this.displayChapitre4}/>
+        }
+        {this.state.chapitre4 &&
+          <Chapitre4Form displayChapitre5={this.displayChapitre5}/>
+        }
+        {this.state.chapitre5 &&
+          <Chapitre5Form displayChapitre6={this.displayChapitre6}/>
+        }
+        {this.state.chapitre6 &&
+          <Chapitre6Form displayChapitre7={this.displayChapitre7}/>
+        }
+        {this.state.chapitre7 &&
+          <Chapitre7Form />
+        }
 
         <div className="form-group">
           <label htmlFor="liens">Liens</label>

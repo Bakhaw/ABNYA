@@ -51,14 +51,50 @@ class Accueil extends Component {
                     <h1>{infos.date_lecon}</h1>
                   </div>
                   <div className="col-md-8">
-                    {/* Contenu des chapitres */}
+                    <h4>Chapitre 1</h4>
                     <Chapitre1 infos={infos} url={this.state.url}/>
-                    <Chapitre2 infos={infos} url={this.state.url}/>
-                    <Chapitre3 infos={infos} url={this.state.url}/>
-                    <Chapitre4 infos={infos} url={this.state.url}/>
-                    <Chapitre5 infos={infos} url={this.state.url}/>
-                    <Chapitre6 infos={infos} url={this.state.url}/>
-                    <Chapitre7 infos={infos} url={this.state.url}/>
+
+                    {infos.chapitres.chapitre_2 &&
+                      <div>
+                        <h4>Chapitre 2</h4>
+                        <Chapitre2 infos={infos} url={this.state.url}/>
+                      </div>
+                    }
+
+                    {infos.chapitres.chapitre_3 &&
+                      <div>
+                        <h4>Chapitre 3</h4>
+                        <Chapitre3 infos={infos} url={this.state.url}/>
+                      </div>
+                    }
+
+                    {infos.chapitres.chapitre_4 &&
+                      <div>
+                        <h4>Chapitre 4</h4>
+                        <Chapitre4 infos={infos} url={this.state.url}/>
+                      </div>
+                    }
+
+                    {infos.chapitres.chapitre_5 &&
+                      <div>
+                        <h4>Chapitre 5</h4>
+                        <Chapitre5 infos={infos} url={this.state.url}/>
+                      </div>
+                    }
+
+                    {infos.chapitres.chapitre_6 &&
+                      <div>
+                        <h4>Chapitre 6</h4>
+                        <Chapitre6 infos={infos} url={this.state.url}/>
+                      </div>
+                    }
+
+                    {infos.chapitres.chapitre_7 &&
+                      <div>
+                        <h4>Chapitre 7</h4>
+                        <Chapitre7 infos={infos} url={this.state.url}/>
+                      </div>
+                    }
                   </div>
                   <div className="col-md-2 d-flex">
                     <DeleteButton id={infos._id} url={this.state.url} />

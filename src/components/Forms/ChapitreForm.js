@@ -62,7 +62,7 @@ class ChapitreForm extends Component {
                  defaultValue={this.props.coursValue} placeholder="Cours ..." />
         </div>
 
-        <p onClick={this.displaySousTitre2} className="text-primary displayFormButton">
+        <p onClick={this.displaySousTitre2} className="text-primary displaySubtitleButton">
           + Ajouter un 2e sous-titre
         </p>
 
@@ -83,7 +83,7 @@ class ChapitreForm extends Component {
                      aria-describedby={this.props.cours2}
                      defaultValue={this.props.cours2Value} placeholder="Cours 2 ..." />
             </div>
-            <p onClick={this.displaySousTitre3} className="text-primary displayFormButton">
+            <p onClick={this.displaySousTitre3} className="text-primary displaySubtitleButton">
               + Ajouter un 3e sous-titre
             </p>
           </div>
@@ -106,7 +106,7 @@ class ChapitreForm extends Component {
                      aria-describedby={this.props.cours3}
                      defaultValue={this.props.cours3Value} placeholder="Cours 3 ..." />
             </div>
-            <p onClick={this.displaySousTitre4} className="text-primary displayFormButton">
+            <p onClick={this.displaySousTitre4} className="text-primary displaySubtitleButton">
               + Ajouter un 4e sous-titre
             </p>
           </div>
@@ -129,7 +129,7 @@ class ChapitreForm extends Component {
                      aria-describedby={this.props.cours4}
                      defaultValue={this.props.cours4Value} placeholder="Cours 4 ..." />
             </div>
-            <p onClick={this.displaySousTitre5} className="text-primary displayFormButton">
+            <p onClick={this.displaySousTitre5} className="text-primary displaySubtitleButton">
               + Ajouter un 5e sous-titre
             </p>
           </div>

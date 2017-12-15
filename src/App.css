@@ -122,3 +122,9 @@ li {
 .displayFormButton:hover {
   cursor: pointer;
 }
+.displaySubtitleButton {
+  color: #f24339 !important;
+}
+.displaySubtitleButton:hover {
+  cursor: pointer;
+}

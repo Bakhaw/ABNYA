@@ -4,40 +4,39 @@ import EditButton4 from './EditButton4';
 class Chapitre4 extends Component {
 
   render() {
+
+    const chapitre4 = this.props.infos.chapitres.chapitre_4;
+
     return (
       <div>
+        <div>
+          <p>{chapitre4.nom}</p>
+          <p>{chapitre4.soustitre.nom}</p>
+          <p>{chapitre4.soustitre.cours}</p>
+        </div>
 
-        <h3>CHAPITRE 4</h3>
-
-        <p>{this.props.infos.chapitres.chapitre_4.nom}</p>
-        <p>{this.props.infos.chapitres.chapitre_4.soustitre.nom}</p>
-        <p>{this.props.infos.chapitres.chapitre_4.soustitre.cours}</p>
-
-        {this.props.infos.chapitres.chapitre_4.soustitre_2 &&
+        {chapitre4.soustitre_2 &&
           <div>
-            <p>{this.props.infos.chapitres.chapitre_4.soustitre_2.nom}</p>
-            <p>{this.props.infos.chapitres.chapitre_4.soustitre_2.cours}</p>
+            <p>{chapitre4.soustitre_2.nom}</p>
+            <p>{chapitre4.soustitre_2.cours}</p>
           </div>
         }
-
-        {this.props.infos.chapitres.chapitre_4.soustitre_3 &&
+        {chapitre4.soustitre_3 &&
           <div>
-            <p>{this.props.infos.chapitres.chapitre_4.soustitre_3.nom}</p>
-            <p>{this.props.infos.chapitres.chapitre_4.soustitre_3.cours}</p>
+            <p>{chapitre4.soustitre_3.nom}</p>
+            <p>{chapitre4.soustitre_3.cours}</p>
           </div>
         }
-
-        {this.props.infos.chapitres.chapitre_4.soustitre_4 &&
+        {chapitre4.soustitre_4 &&
           <div>
-            <p>{this.props.infos.chapitres.chapitre_4.soustitre_4.nom}</p>
-            <p>{this.props.infos.chapitres.chapitre_4.soustitre_4.cours}</p>
+            <p>{chapitre4.soustitre_4.nom}</p>
+            <p>{chapitre4.soustitre_4.cours}</p>
           </div>
         }
-
-        {this.props.infos.chapitres.chapitre_4.soustitre_5 &&
+        {chapitre4.soustitre_5 &&
           <div>
-            <p>{this.props.infos.chapitres.chapitre_4.soustitre_5.nom}</p>
-            <p>{this.props.infos.chapitres.chapitre_4.soustitre_5.cours}</p>
+            <p>{chapitre4.soustitre_5.nom}</p>
+            <p>{chapitre4.soustitre_5.cours}</p>
           </div>
         }
         <EditButton4 infos={this.props.infos} url={this.props.url} />
@@ -45,7 +44,6 @@ class Chapitre4 extends Component {
       </div>
     );
   }
-
 }
 
 export default Chapitre4;

@@ -29,6 +29,9 @@ class Chapitre2Form extends Component {
                       cours5="chapitres.chapitre_2.soustitre_5.cours"
                       cours5Value={this.props.cours5}
                     />
+         <p onClick={this.props.displayChapitre3} className="text-primary displayFormButton">
+          + Ajouter un 3e chapitre
+        </p>
       </div>
     );
   }

@@ -1,17 +1,17 @@
 ### Init the project and install all the required dependencies with
 
 ```
-yarn install
+$ yarn install
 ```
 
 ### Launch the server with
 
 ```
-nodemon server/server.js
+$ yarn run server
 ```
 
 ### Run the app with
 
 ```
-yarn start
+$ yarn start
 ```

@@ -18,7 +18,9 @@ class EditForm extends Component {
           <label>Liens</label>
           <input className="form-control" type="text" name="liens"
                  placeholder="Et là tu met tes liens" defaultValue={this.props.liens}/>
-          <button type="submit" className="btn btn-secondary">Sauvegarder</button>
+          <button type="submit" className="btn btn-secondary">
+            <i className="fa fa-check" aria-hidden="true"></i>
+          </button>
         </div>
         </form>
       </div>

@@ -7,7 +7,7 @@ class Navbar extends Component {
       <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link to="/" className="navbar-brand text-secondary">
-          ABNYA
+          <i className="fa fa-home fa-lg" aria-hidden="true"></i>
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"

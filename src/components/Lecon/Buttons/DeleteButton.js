@@ -8,7 +8,7 @@ class DeleteButton extends Component {
         <form className="form-group"
               action={`${this.props.url}/delete/${this.props.id}`} method="GET">
           <button type="submit" className="btn btn-light">
-            <i class="fa fa-times" aria-hidden="true"></i>
+            <i className="fa fa-times" aria-hidden="true"></i>
           </button>
         </form>
       </div>

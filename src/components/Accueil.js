@@ -92,7 +92,7 @@ class Accueil extends Component {
                         <Chapitre7 infos={infos} url={this.state.url}/>
                       </div>
                     }
-                    <p>{infos.liens}</p>
+                    <a href={infos.liens} target="_blank">Liens</a>
                   </div>
                   <div className="col-md-2 d-flex">
                     <EditButton id={infos._id} url={this.state.url} infos={infos} />

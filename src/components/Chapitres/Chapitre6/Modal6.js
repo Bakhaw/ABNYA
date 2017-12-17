@@ -26,7 +26,7 @@ export default class Modal6 extends React.Component {
     return (
       <div>
           <button type="submit" className="btn btn-secondary" onClick={this.handleOpen}>
-            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <i className="fa fa-pencil" aria-hidden="true"></i>
           </button>
           <Dialog title="Modifier" modal={false} contentStyle={customContentStyle}
                   open={this.state.open} autoScrollBodyContent={true}

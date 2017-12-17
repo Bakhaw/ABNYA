@@ -42,7 +42,9 @@ class Accueil extends Component {
             Tu n'as toujours pas ajouté de cours ici, c'est pas très sérieux!
           </h4>
         )}
+
         {this.state.data && (
+        // Si le tableau contient de la data
           <ul className="container-fluid cours-container">
             {this.state.data.map((infos, index) => (
               <li key={index}>

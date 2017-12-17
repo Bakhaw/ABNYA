@@ -9,7 +9,7 @@ import Navbar2 from './components/Navbars/Navbar2';
 
 import LandingPage from './components/LandingPage';
 
-// Components exported from the same Location
+// Consts from the same Location
 import { Anatomie, AnatomieForm,
          Danse, DanseForm,
          Analyse, AnalyseForm,

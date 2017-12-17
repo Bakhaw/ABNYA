@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import ChapitreForm from '../../Forms/ChapitreForm';
+import Chapitre2Form from '../Chapitre2/Chapitre2Form';
 
 class Chapitre1Form extends Component {
+
+state = {
+      chapitre2: false,
+    };
+
+  displayChapitre2 = () => {
+    this.setState({
+      chapitre2: !this.state.chapitre2,
+    });
+  };
 
   render() {
     return (
@@ -29,10 +40,13 @@ class Chapitre1Form extends Component {
                       cours5="chapitres.chapitre.soustitre_5.cours"
                       cours5Value={this.props.cours5}
                     />
-        <p onClick={this.props.displayChapitre2} className="text-primary displayFormButton">
+        <p onClick={this.displayChapitre2} className="text-primary displayFormButton">
           + Ajouter un 2e chapitre
         </p>
-      </div>
+        {this.state.chapitre2 &&
+          <Chapitre2Form />
+        }
+      </div>  
     );
   }
 

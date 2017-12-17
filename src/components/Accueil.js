@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import Navbar2 from './Navbars/Navbar2';
 
-import DeleteButton from './Buttons/DeleteButton';
+import DeleteButton from './Lecon/Buttons/DeleteButton';
+import EditButton from './Lecon/Buttons/EditButton';
 
 import Chapitre1 from './Chapitres/Chapitre1/Chapitre1';
 import Chapitre2 from './Chapitres/Chapitre2/Chapitre2';
@@ -53,52 +54,48 @@ class Accueil extends Component {
                     <h1>{infos.date_lecon}</h1>
                   </div>
                   <div className="col-md-8">
-                    <h4>Chapitre 1</h4>
+                    <h1>{infos.titre_lecon}</h1>
                     <Chapitre1 infos={infos} url={this.state.url}/>
 
                     {infos.chapitres.chapitre_2 &&
                       <div>
-                        <h4>Chapitre 2</h4>
                         <Chapitre2 infos={infos} url={this.state.url}/>
                       </div>
                     }
 
                     {infos.chapitres.chapitre_3 &&
                       <div>
-                        <h4>Chapitre 3</h4>
                         <Chapitre3 infos={infos} url={this.state.url}/>
                       </div>
                     }
 
                     {infos.chapitres.chapitre_4 &&
                       <div>
-                        <h4>Chapitre 4</h4>
                         <Chapitre4 infos={infos} url={this.state.url}/>
                       </div>
                     }
 
                     {infos.chapitres.chapitre_5 &&
                       <div>
-                        <h4>Chapitre 5</h4>
                         <Chapitre5 infos={infos} url={this.state.url}/>
                       </div>
                     }
 
                     {infos.chapitres.chapitre_6 &&
                       <div>
-                        <h4>Chapitre 6</h4>
                         <Chapitre6 infos={infos} url={this.state.url}/>
                       </div>
                     }
 
                     {infos.chapitres.chapitre_7 &&
                       <div>
-                        <h4>Chapitre 7</h4>
                         <Chapitre7 infos={infos} url={this.state.url}/>
                       </div>
                     }
+                    <p>{infos.liens}</p>
                   </div>
                   <div className="col-md-2 d-flex">
+                    <EditButton id={infos._id} url={this.state.url} infos={infos} />
                     <DeleteButton id={infos._id} url={this.state.url} />
                   </div>
                 </div>

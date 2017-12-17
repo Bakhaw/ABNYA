@@ -1,13 +1,13 @@
 import React from 'react';
 import Dialog from 'material-ui/Dialog';
-import EditForm3 from './EditForm3';
+import EditForm from './EditForm';
 
 const customContentStyle = {
   width: '90%',
   maxWidth: 'none',
 };
 
-export default class Modal3 extends React.Component {
+export default class Modal extends React.Component {
 
   state = {
     open: false,
@@ -31,22 +31,7 @@ export default class Modal3 extends React.Component {
           <Dialog title="Modifier" modal={false} contentStyle={customContentStyle}
                   open={this.state.open} autoScrollBodyContent={true}
                   onRequestClose={this.handleClose}>
-            <EditForm3 url={this.props.url}
-                      id={this.props.id}
-                      date={this.props.date}
-                      titre={this.props.titre}
-                      chapitre={this.props.chapitre}
-                      soustitre={this.props.soustitre}
-                      cours={this.props.cours}
-                      soustitre2={this.props.soustitre2}
-                      cours2={this.props.cours2}
-                      soustitre3={this.props.soustitre3}
-                      cours3={this.props.cours3}
-                      soustitre4={this.props.soustitre4}
-                      cours4={this.props.cours4}
-                      soustitre5={this.props.soustitre5}
-                      cours5={this.props.cours5}
-                      liens={this.props.liens}/>
+            <EditForm {...this.props}/>
             <button type="submit" className="btn btn-secondary" onClick={this.handleClose}>
               Annuler
             </button>
